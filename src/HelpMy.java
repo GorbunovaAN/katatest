@@ -20,9 +20,8 @@ public class HelpMy {
         map.put("X", 10);
 
         Scanner s = new Scanner(System.in);
-        System.out.println("введите выражение");
+        System.out.println("Input: ");
         String str = s.nextLine();
-       // System.out.println("вы ввели "+ x);
         String[] elements = str.split(" ");
 
         int x;
@@ -39,7 +38,6 @@ public class HelpMy {
            if (x > 10 || x < 1 || y < 1 || y > 10 ) {
                throw new MyException("Введенное значение должно быть от 1 до 10");
            }
-           //   System.out.println("x=" + x + ", y=" + y +"; x+y=" + (x+y));
            int result = operation(elements[1], x, y);
            System.out.println("Output: " + result);
        } catch (NumberFormatException e) {
